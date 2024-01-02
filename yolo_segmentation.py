@@ -7,17 +7,18 @@ class YOLOSEG:
 
     def detect(self, img):
         # get img shape
-        height, width, channel = img.shape
+        # height, width, channel = img.shape
         
-        results = self.model.predict(source=img.copy(), save=False, save_txt=False)
+        results = self.model.predict(source=img.copy(), save=False, save_txt=False, conf=0.7)
         result = results[0]
         l = len(result)
 
         segmentation_contours_idx = []
         if len(result) > 0:
             for seg in result.masks.xy:
-                seg[:, 0] *= width
-                seg[:, 1] *= height
+                # print(seg)
+                # seg[:, 0] *= width
+                # seg[:, 1] *= height
                 segment = np.array(seg, dtype=np.int32)
                 segmentation_contours_idx.append(segment)
 

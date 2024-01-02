@@ -9,5 +9,5 @@ roboflow:
   version: 1
   workspace: acqmal
 test: ../test/images
-train: Bisindo-classication-1/train/images
-val: Bisindo-classication-1/valid/images
+train: /Users/acqmallatief/Project/Bisindo Classification/Bisindo-classication-1/train/images
+val: /Users/acqmallatief/Project/Bisindo Classification/Bisindo-classication-1/valid/images

@@ -1,4 +1,3 @@
-# %%
 import cv2
 import cvzone
 from yolo_segmentation import YOLOSEG
@@ -14,13 +13,13 @@ class_list = label.split("\n")
 
 
 
-def RGB(event, x, y, flags, param):
-    if event == cv2.EVENT_MOUSEMOVE :
-        point = [x, y]
-        print(point)
+# def RGB(event, x, y, flags, param):
+#     if event == cv2.EVENT_MOUSEMOVE :
+#         point = [x, y]
+#         print(point)
 
-cv2.namedWindow('RGB')
-cv2.setMouseCallback('RGB', RGB)
+# cv2.namedWindow('RGB')
+# cv2.setMouseCallback('RGB', RGB)
 
 
 while True:
@@ -56,4 +55,3 @@ vid.release()
 cv2.destroyAllWindows()
 
 
-# %%
