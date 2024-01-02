@@ -10,10 +10,12 @@ rf = Roboflow(api_key="API")
 project = rf.workspace("acqmal").project("bisindo-classication")
 dataset = project.version(1).download("yolov8")
 
+# %%
 ## Model YoloV8
-model = YOLO("yolov8m-seg.pt")
+model = YOLO("yolov8s-seg.pt")
 results = model.train(data='Bisindo-classication-1/data.yaml', epochs=100, imgsz=640)
 
+# %%
 ## Visual result
 fig, axs = plt.subplots(3, 1, figsize=(15, 15))
 
@@ -31,3 +33,6 @@ axs[2].set_title("predict")
 fig.suptitle("Result", fontsize=24, fontweight="bold")
 fig.show()
 
+
+
+# %%
